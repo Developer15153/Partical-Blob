@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Partical-Blob/static/css/main.5a3ba640.css",
+    "main.js": "/Partical-Blob/static/js/main.f4580cc7.js",
+    "index.html": "/Partical-Blob/index.html",
+    "main.5a3ba640.css.map": "/Partical-Blob/static/css/main.5a3ba640.css.map",
+    "main.f4580cc7.js.map": "/Partical-Blob/static/js/main.f4580cc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a3ba640.css",
+    "static/js/main.f4580cc7.js"
+  ]
+}
