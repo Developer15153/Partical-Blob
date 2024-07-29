@@ -41,7 +41,7 @@ function Scene() {
   useEffect(() => {
     const handleResize = () => {
       mesh.current.material.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
-      setScale(window.innerWidth < 600 ? 1 : 1.5);
+      setScale(window.innerWidth < 600 ? 1 : 1.5); //this will set a scale in mobile devices
     };
 
     window.addEventListener('resize', handleResize);
