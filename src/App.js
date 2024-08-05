@@ -19,13 +19,13 @@ function Scene() {
       step: 0.05
     },
     intensity: {
-      value: 0.15,
+      value: 0.25,
       min: 0.01,
       max: 0.3,
       step: 0.01
     },
     particalSize: {
-      value: 65.0,
+      value: 40.0,
       min: 5.0,
       max: 100.0,
       step: 1.0
