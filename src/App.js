@@ -4,15 +4,33 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import fragmentShader from "./fragment";
 import vertexShader from "./vertex";
+import { useControls } from "leva";
 
 function Scene() {
+ const [scale, setScale] = useState(1.5);
   const mesh = useRef();
-  const [scale, setScale] = useState(1.5);
-  const speed = 0.3;
-  const colorA = "#3f3089";
-  const colorB = "#00bcff";
-  const intensity = 0.15;
-  const particalSize = 28.0;
+  const { speed, colorA, colorB, intensity, particalSize } = useControls({
+    colorA: "#3f3089",
+    colorB: "#00bcff",
+    speed: {
+      value: 0.3,
+      min: 0.1,
+      max: 2.0,
+      step: 0.05
+    },
+    intensity: {
+      value: 0.15,
+      min: 0.01,
+      max: 0.3,
+      step: 0.01
+    },
+    particalSize: {
+      value: 65.0,
+      min: 5.0,
+      max: 100.0,
+      step: 1.0
+    }
+  });
 
   const uniforms = useMemo(() => {
     return {
